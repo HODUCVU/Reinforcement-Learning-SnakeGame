@@ -36,6 +36,12 @@
 ```
 > pip install -r setup.txt
 ```
+## Run Game
+```
+> cd /game
+> python3 game.py
+```
+
 # Resource
 * Full tutorial: [freeCodeCamp.org](https://www.youtube.com/watch?v=L8ypSXwyBds&list=LL&index=1&t=287s)
 
