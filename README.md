@@ -55,3 +55,6 @@
 ![](/images/result.png)
 # Resource
 * Full tutorial: [freeCodeCamp.org](https://www.youtube.com/watch?v=L8ypSXwyBds&list=LL&index=1&t=287s)
+* My tutorials:
+	* Code game: [Snake game with Python | Pygame](https://www.youtube.com/watch?v=EZ6uXPTmxKo)
+	<!-- * Train model: -->
