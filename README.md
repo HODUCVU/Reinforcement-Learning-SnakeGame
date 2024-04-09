@@ -1,4 +1,23 @@
 # Train an AI to play snake game by using Reinforcement Learning
+## Struct folder
+```
+README.md
+setup.txt
+display/
+├── helper.py
+└── helperv2.py
+game/
+└── game.py
+models/
+├── Linear_QNet.py
+├── QTrainer.py
+└── arial.ttf
+save/
+└── model.pth
+train/
+├── agent.py
+└── train_snake.py
+```
 ## Introduction
 * Using Deep Q Learning to implement reinforcement learning.
 * Framework: PyTorch, Pygame
