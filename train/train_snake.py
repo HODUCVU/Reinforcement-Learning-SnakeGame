@@ -5,7 +5,7 @@ from collections import namedtuple
 import numpy as np
 
 pygame.init()
-font = pygame.font.Font('../models/arial.ttf',25)
+font = pygame.font.Font('./models/arial.ttf',25)
 
 class Direction(Enum):
 	RIGHT = 1
@@ -23,7 +23,7 @@ BLUE2 = (0, 100, 255)
 BLACK = (0, 0, 0)
 
 BLOCK_SIZE = 20
-SPEED = 40
+SPEED = 100
 
 class SnakeGameAI:
 	def __init__(self, w=640, h=480):
@@ -69,7 +69,7 @@ class SnakeGameAI:
 		# Step 3: Check if game over
 		reward = 0 #
 		game_over = False
-		if self._is_collision()i or self.frame_iteration > 100*len(self.snake):
+		if self._is_collision() or self.frame_iteration > 100*len(self.snake):
 			game_over = True
 			reward -= 10 #
 			return reward, game_over, self.score
@@ -122,7 +122,7 @@ class SnakeGameAI:
 
 		if np.array_equal(action, [1,0,0]):
 			new_dir = clock_wise[idx]  # no change direction
-		elif np.array_equal(action, [0,1,0]: # turn right
+		elif np.array_equal(action, [0,1,0]): # turn right
 			next_idx = (idx + 1) % 4
 			new_dir = clock_wise[next_idx]
 		else: # turn left 
@@ -132,13 +132,13 @@ class SnakeGameAI:
 		self.direction = new_dir
 		x = self.head.x
 		y = self.head.y
-		if direction == Direction.RIGHT:
+		if self.direction == Direction.RIGHT:
 			x += BLOCK_SIZE
-		elif direction == Direction.LEFT:
+		elif self.direction == Direction.LEFT:
 			x -= BLOCK_SIZE
-		elif direction == Direction.DOWN:
+		elif self.direction == Direction.DOWN:
 			y += BLOCK_SIZE
-		elif direction == Direction.UP:
+		elif self.direction == Direction.UP:
 			y -= BLOCK_SIZE
 
 		self.head = Point(x, y)

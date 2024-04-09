@@ -41,7 +41,17 @@
 > cd /game
 > python3 game.py
 ```
-
+## Train
+```
+> python3 train/agent.py
+```
+* if you don't train with model existed from /save/model.pth, then add comment in /train/agent.py like below:
+```
+### Load existed model
+# self.model.load_state_dict(torch.load('./save/model.pth'))
+###
+```
+## Result train
+![](/images/result.png)
 # Resource
 * Full tutorial: [freeCodeCamp.org](https://www.youtube.com/watch?v=L8ypSXwyBds&list=LL&index=1&t=287s)
-<!-- 41:00 code agent.py-->

@@ -1,2 +1,3 @@
 *.swo
 venv/*
+*__pycache__*
